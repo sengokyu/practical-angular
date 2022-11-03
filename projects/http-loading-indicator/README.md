@@ -1,24 +1,38 @@
-# HttpLoadingIndicator
+# @practical-angular/http-loading-indicator
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
+This library provide a http interceptor and a directive.
 
-## Code scaffolding
+When HttpClient is working, show/hide your specific element automatically.
 
-Run `ng generate component component-name --project http-loading-indicator` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project http-loading-indicator`.
-> Note: Don't forget to add `--project http-loading-indicator` or else it will be added to the default project in your `angular.json` file. 
+## Getting started
 
-## Build
+Install package.
 
-Run `ng build http-loading-indicator` to build the project. The build artifacts will be stored in the `dist/` directory.
+```console
+npm i @practical-angular/http-loading-indicator
+```
 
-## Publishing
+Update app.module.ts as follows.
 
-After building your library with `ng build http-loading-indicator`, go to the dist folder `cd dist/http-loading-indicator` and run `npm publish`.
+```ts
+import {
+  HttpLoadingIndicatorModule,
+  HTTP_LOADING_INDICATOR_INTERCEPTOR_PROVIDERS,
+} from "http-loading-indicator";
 
-## Running unit tests
+@NgModule({
+  imports: [HttpLoadingIndicatorModule],
+  providers: [HTTP_LOADING_INDICATOR_INTERCEPTOR_PROVIDERS],
+})
+export class AppModule {}
+```
 
-Run `ng test http-loading-indicator` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Update your component (typically app.component.ts) where you want to show loading indicator.
 
-## Further help
+```html
+<div praHttpLoadingIndicator>
+  <div><img src="loading-animation.gif" /></div>
+</div>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Please see a sample as you like.
