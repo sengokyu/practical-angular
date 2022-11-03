@@ -33,6 +33,110 @@
           }
         }
       }
+    },
+    "http-loading-indicator-sample": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "samples/http-loading-indicator",
+      "sourceRoot": "samples/http-loading-indicator/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/http-loading-indicator-sample",
+            "index": "samples/http-loading-indicator/src/index.html",
+            "main": "samples/http-loading-indicator/src/main.ts",
+            "polyfills": "samples/http-loading-indicator/src/polyfills.ts",
+            "tsConfig": "samples/http-loading-indicator/tsconfig.app.json",
+            "assets": [
+              "samples/http-loading-indicator/src/favicon.ico",
+              "samples/http-loading-indicator/src/assets"
+            ],
+            "styles": [
+              "samples/http-loading-indicator/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "samples/http-loading-indicator/src/environments/environment.ts",
+                  "with": "samples/http-loading-indicator/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "http-loading-indicator-sample:build:production"
+            },
+            "development": {
+              "browserTarget": "http-loading-indicator-sample:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "http-loading-indicator-sample:build"
+          }
+        }
+      }
     }
   },
   "cli": {

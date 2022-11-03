@@ -1,0 +1,62 @@
+<p>
+  <button (click)="invoke()">Invoke HTTP Request !</button>
+</p>
+
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes">{{hero.id}} {{hero.name}}</li>
+  </ul>
+
+  <div praHttpLoadingIndicator>
+    <div class="loading-placeholder"></div>
+  </div>
+</div>
+
+
+<svg width="0" height="0">
+  <defs>
+    <clipPath id="loading-placeholder-mask">
+      <rect x="20" y="24" width="70" height="14" rx="2"></rect>
+      <rect x="110" y="24" width="70" height="14" rx="2"></rect>
+      <rect x="200" y="24" width="70" height="14" rx="2"></rect>
+
+      <rect x="20" y="72" width="70" height="14" rx="2"></rect>
+      <rect x="110" y="72" width="70" height="14" rx="2"></rect>
+      <rect x="200" y="72" width="70" height="14" rx="2"></rect>
+
+      <rect x="20" y="120" width="70" height="14" rx="2"></rect>
+      <rect x="110" y="120" width="70" height="14" rx="2"></rect>
+      <rect x="200" y="120" width="70" height="14" rx="2"></rect>
+
+      <rect x="20" y="168" width="70" height="14" rx="2"></rect>
+      <rect x="110" y="168" width="70" height="14" rx="2"></rect>
+      <rect x="200" y="168" width="70" height="14" rx="2"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+<style type="text/css">
+  .loading-placeholder {
+    width: 100%;
+    height: 12em;
+    background: linear-gradient(-70deg, #eee 2%, #bbb 23%, #eee 37%);
+    clip-path: url(#loading-placeholder-mask);
+
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: placeholderAnimate;
+    background-size: 530px;
+  }
+
+  @keyframes placeholderAnimate {
+    0% {
+      background-position: 0px 0;
+    }
+
+    100% {
+      background-position: 530px 0;
+    }
+  }
+</style>
