@@ -1,16 +1,9 @@
 import { NgModule } from '@angular/core';
-import { HttpLoadingIndicatorComponent } from './http-loading-indicator.component';
-
-
+import { HttpLoadingIndicatorDirective } from './http-loading-indicator.directive';
 
 @NgModule({
-  declarations: [
-    HttpLoadingIndicatorComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    HttpLoadingIndicatorComponent
-  ]
+  declarations: [HttpLoadingIndicatorDirective],
+  imports: [],
+  exports: [HttpLoadingIndicatorDirective],
 })
-export class HttpLoadingIndicatorModule { }
+export class HttpLoadingIndicatorModule {}

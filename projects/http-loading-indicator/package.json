@@ -1,6 +1,15 @@
 {
-  "name": "http-loading-indicator",
+  "name": "@practice-angular/http-loading-indicator",
   "version": "0.0.1",
+  "keywords": [
+    "angular"
+  ],
+  "author": "sengokyu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sengokyu/practical-angular"
+  },
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"
