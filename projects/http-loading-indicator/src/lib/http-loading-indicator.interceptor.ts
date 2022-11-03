@@ -5,7 +5,7 @@ import {
   HttpRequest,
   HTTP_INTERCEPTORS,
 } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Provider } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { HttpLoadingIndicatorService } from './http-loading-indicator.service';
@@ -24,7 +24,7 @@ export class HttpLoadingIndicatorInterceptor implements HttpInterceptor {
   }
 }
 
-export const HTTP_LOADING_INDICATOR_INTERCEPTOR_PROVIDERS = [
+export const HTTP_LOADING_INDICATOR_INTERCEPTOR_PROVIDERS: Provider = [
   {
     provide: HTTP_INTERCEPTORS,
     useClass: HttpLoadingIndicatorInterceptor,
