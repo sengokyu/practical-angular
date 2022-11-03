@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:http-loading-indicator": "ng serve http-loading-indicator-sample",
+    "prestart:http-loading-indicator": "ng build http-loading-indicator",
     "build": "ng build",
+    "build:prod": "ng build -c production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -27,6 +29,7 @@
     "@angular/cli": "~14.2.7",
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
+    "angular-in-memory-web-api": "^0.14.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
