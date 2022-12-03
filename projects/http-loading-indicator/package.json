@@ -1,6 +1,6 @@
 {
-  "name": "@practice-angular/http-loading-indicator",
-  "version": "0.0.1",
+  "name": "@practical-angular/http-loading-indicator",
+  "version": "15.0.2-alpha.1",
   "keywords": [
     "angular"
   ],
@@ -11,8 +11,8 @@
     "url": "https://github.com/sengokyu/practical-angular"
   },
   "peerDependencies": {
-    "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0"
+    "@angular/common": "^15.0.2",
+    "@angular/core": "^15.0.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"
