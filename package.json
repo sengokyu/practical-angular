@@ -1,5 +1,5 @@
 {
-  "name": "@practical-angular",
+  "name": "practical-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,6 +7,7 @@
     "prestart:http-loading-indicator": "ng build http-loading-indicator",
     "build:http-loading-indicator": "ng build http-loading-indicator",
     "build:local-storage": "ng build local-storage",
+    "build": "run-p build:*",
     "watch": "ng build --watch --configuration development",
     "test:local-storage": "ng test local-storage",
     "test": "ng test"
