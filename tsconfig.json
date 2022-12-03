@@ -10,6 +10,9 @@
     "paths": {
       "http-loading-indicator": [
         "dist/http-loading-indicator"
+      ],
+      "local-storage": [
+        "dist/local-storage"
       ]
     },
     "noPropertyAccessFromIndexSignature": true,

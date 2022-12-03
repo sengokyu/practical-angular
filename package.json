@@ -5,9 +5,10 @@
     "ng": "ng",
     "start:http-loading-indicator": "ng serve http-loading-indicator-sample",
     "prestart:http-loading-indicator": "ng build http-loading-indicator",
-    "build": "ng build",
-    "build:prod": "ng build -c production",
+    "build:http-loading-indicator": "ng build http-loading-indicator",
+    "build:local-storage": "ng build local-storage",
     "watch": "ng build --watch --configuration development",
+    "test:local-storage": "ng test local-storage",
     "test": "ng test"
   },
   "private": true,
