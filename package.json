@@ -11,6 +11,8 @@
     "start:local-storage:serve": "ng serve local-storage-sample",
     "build:http-loading-indicator": "ng build http-loading-indicator",
     "build:local-storage": "ng build local-storage",
+    "publish:http-loading-indicator": "npm publish ./dist/http-loading-indicator --access public",
+    "publish:local-storage": "npm publish ./dist/local-storage --access public",
     "build": "run-p build:*",
     "watch": "ng build --watch --configuration development",
     "test:local-storage": "ng test local-storage",
