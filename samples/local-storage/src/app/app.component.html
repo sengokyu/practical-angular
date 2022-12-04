@@ -1,0 +1,16 @@
+<h1>Local Storage sample</h1>
+<form>
+  <p>
+    <label>Key:
+      <input [(ngModel)]="key" name="key" required="">
+    </label>
+    <label>Value:
+      <input [(ngModel)]="value" name="value">
+    </label>
+    <input type="reset">
+  </p>
+  <button (click)="callSetItem()">Set Item</button>
+  <button (click)="callGetItem()">Get Item</button>
+  <button (click)="callRemoveItem()">Remove Item</button>
+  <button (click)="callClear()">Clear storage</button>
+</form>
