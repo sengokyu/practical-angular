@@ -162,12 +162,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "browsers": "ChromeHeadless",
+            "main": "projects/local-storage/src/test.ts",
             "tsConfig": "projects/local-storage/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "karmaConfig": "projects/local-storage/karma.conf.js"
           }
         }
       }
@@ -268,25 +265,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "local-storage-sample:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "samples/local-storage/tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "samples/local-storage/src/favicon.ico",
-              "samples/local-storage/src/assets"
-            ],
-            "styles": [
-              "samples/local-storage/src/styles.scss"
-            ],
-            "scripts": []
           }
         }
       }
