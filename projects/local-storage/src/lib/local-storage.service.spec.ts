@@ -15,7 +15,10 @@ describe('LocalStorageService', () => {
     ]);
 
     TestBed.configureTestingModule({
-      providers: [{ provide: Storage, useValue: storageSpy }],
+      providers: [
+        { provide: Storage, useValue: storageSpy },
+        LocalStorageService,
+      ],
     });
     service = TestBed.inject(LocalStorageService);
   });
