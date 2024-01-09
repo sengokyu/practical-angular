@@ -1,6 +1,6 @@
 {
   "name": "practical-angular",
-  "version": "15.0.2",
+  "version": "17.0.0-alpha.1",
   "scripts": {
     "ng": "ng",
     "start:http-loading-indicator": "run-s start:http-loading-indicator:*",
