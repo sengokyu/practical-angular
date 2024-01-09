@@ -1,24 +1,43 @@
-# LocalStorage
+# @practical-angular/local-storage
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+LocalStorage support for Angular.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name --project local-storage` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project local-storage`.
-> Note: Don't forget to add `--project local-storage` or else it will be added to the default project in your `angular.json` file. 
+Import LocalStorageModule to a module.
 
-## Build
+```diff
++ import { LocalStorageModule } from '@practical-angular/local-storage';
 
-Run `ng build local-storage` to build the project. The build artifacts will be stored in the `dist/` directory.
+  @NgModule({
+-   imports: [BrowserModule],
++   imports: [BrowserModule, LocalStorageModule],
+  })
+```
 
-## Publishing
+Inject the service to a component.
 
-After building your library with `ng build local-storage`, go to the dist folder `cd dist/local-storage` and run `npm publish`.
+```diff
++ import { LocalStorageService } from '@practical-angular/local-storage';
 
-## Running unit tests
+  export class YourComponent {
+-   constructor() {}
++   constructor(private localStorageService: LocalStorageService) {}
+  }
+```
 
-Run `ng test local-storage` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Call Set / Get / Remove Clear method.
 
-## Further help
+```ts
+// Set item.
+this.localStorageService.setItem(key, value);
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+// Get item
+const value = this.localStorageService.getItem(key);
+
+// Remove item
+this.localStorageService.removeItem(key);
+
+// Clear storage
+this.localStorageService.clear();
+```
