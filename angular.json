@@ -122,10 +122,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "http-loading-indicator-sample:build:production"
+              "buildTarget": "http-loading-indicator-sample:build:production"
             },
             "development": {
-              "browserTarget": "http-loading-indicator-sample:build:development"
+              "buildTarget": "http-loading-indicator-sample:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -133,7 +133,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "http-loading-indicator-sample:build"
+            "buildTarget": "http-loading-indicator-sample:build"
           }
         }
       }
@@ -253,10 +253,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "local-storage-sample:build:production"
+              "buildTarget": "local-storage-sample:build:production"
             },
             "development": {
-              "browserTarget": "local-storage-sample:build:development"
+              "buildTarget": "local-storage-sample:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -264,7 +264,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "local-storage-sample:build"
+            "buildTarget": "local-storage-sample:build"
           }
         }
       }
