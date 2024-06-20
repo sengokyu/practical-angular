@@ -1,6 +1,6 @@
 {
   "name": "practical-angular",
-  "version": "15.0.2",
+  "version": "15.2.11",
   "scripts": {
     "ng": "ng",
     "start:http-loading-indicator": "run-s start:http-loading-indicator:*",
@@ -21,6 +21,7 @@
   },
   "private": true,
   "devDependencies": {
+    "@angular-devkit/build-angular": "^15.2.11",
     "@angular/animations": "^15.2.10",
     "@angular/cli": "~15.2.11",
     "@angular/common": "^15.2.10",
