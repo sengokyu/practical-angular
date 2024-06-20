@@ -14,6 +14,7 @@
     "publish:http-loading-indicator": "npm publish ./dist/http-loading-indicator --access public",
     "publish:local-storage": "npm publish ./dist/local-storage --access public",
     "build": "run-p build:*",
+    "publish": "run-p publish:*",
     "watch": "ng build --watch --configuration development",
     "test:local-storage": "ng test local-storage",
     "test": "ng test"
