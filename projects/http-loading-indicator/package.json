@@ -1,6 +1,6 @@
 {
   "name": "@practical-angular/http-loading-indicator",
-  "version": "15.2.11",
+  "version": "15.2.11-rc.1",
   "keywords": [
     "angular"
   ],
@@ -15,6 +15,6 @@
     "@angular/core": "^15.2.11"
   },
   "dependencies": {
-    "tslib": "^2.6.3"
+    "tslib": "^2.3.0"
   }
 }

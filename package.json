@@ -1,6 +1,6 @@
 {
   "name": "practical-angular",
-  "version": "15.2.11",
+  "version": "15.2.11-rc.1",
   "scripts": {
     "ng": "ng",
     "start:http-loading-indicator": "run-s start:http-loading-indicator:*",
@@ -43,7 +43,7 @@
     "ng-packagr": "^15.2.2",
     "npm-run-all": "^4.1.5",
     "rxjs": "~7.5.0",
-    "tslib": "^2.6.3",
+    "tslib": "^2.3.0",
     "typescript": "~4.8.4",
     "zone.js": "~0.11.4"
   }
